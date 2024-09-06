@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Transfer Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="tel"], input[type="date"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Transfer Request Form</h1>
+    <form id="transferForm" action="https://formspree.io/f/your_formspree_id" method="POST">
+        <h2>Section 1: Employee Request</h2>
+        <label for="employeeName">Employee's Name:</label>
+        <input type="text" id="employeeName" name="employeeName" required>
+
+        <label for="employeePhone">Employee's Phone Number:</label>
+        <input type="tel" id="employeePhone" name="employeePhone" required>
+
+        <label for="currentPosition">Current Position and Department:</label>
+        <input type="text" id="currentPosition" name="currentPosition" required>
+
+        <label for="currentSupervisor">Current Supervisor's Name:</label>
+        <input type="text" id="currentSupervisor" name="currentSupervisor" required>
+
+        <label for="desiredPosition">Desired Position, Shift, and Reason for Transfer/Reassignment:</label>
+        <textarea id="desiredPosition" name="desiredPosition" rows="4" required></textarea>
+
+        <label for="notificationDate">I have notified my current supervisor on this date:</label>
+        <input type="date" id="notificationDate" name="notificationDate" required>
+
+        <h2>Section 5: Additional Information</h2>
+        <label for="presentDuties">Describe Your Present Job Duties:</label>
+        <textarea id="presentDuties" name="presentDuties" rows="4" required></textarea>
+
+        <label for="employmentHistory">Describe Your Past Employment History (Include Dates, Titles, and Responsibilities):</label>
+        <textarea id="employmentHistory" name="employmentHistory" rows="4" required></textarea>
+
+        <label for="qualifications">Describe Your Qualifications for the Desired Position (Include Skills, Experience, Achievements):</label>
+        <textarea id="qualifications" name="qualifications" rows="4" required></textarea>
+
+        <input type="submit" value="Submit Transfer Request">
+    </form>
+</body>
+</html>
